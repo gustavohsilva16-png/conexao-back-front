@@ -1,0 +1,47 @@
+/* =========================================
+   EFEITO PARALLAX NA FAIXA HERO (.hero)
+   ========================================= */
+
+.hero.hero-parallax {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Camada da imagem de fundo com sobra vertical para o deslocamento */
+.hero-parallax-bg {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background-image: url('../../public/assets/images/parallax/parallax.jpg');
+  background-size: cover;
+  background-position: center 62%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Véu verde-claro translúcido que preserva a identidade visual e o contraste do texto */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(235, 243, 232, 0.78) 0%,
+    rgba(235, 243, 232, 0.62) 50%,
+    rgba(1, 2, 0, 0.82) 100%
+  );
+  backdrop-filter: blur(1px);
+  z-index: 1;
+}
+
+/* Garante que título, subtítulo e botão fiquem acima do fundo */
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+}

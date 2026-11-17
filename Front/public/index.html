@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioCosmetics - Cosméticos Orgânicos e Sustentáveis</title>
+
+  <!-- ÍCONES LUCIDE -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- LIGAÇÃO COM O ARQUIVO DE ESTILO PRINCIPAL (CSS) -->
+  <link rel="stylesheet" href="../src/styles/store.css">
+
+  <!-- CSS EXCLUSIVO DO EFEITO PARALLAX -->
+  <link rel="stylesheet" href="../src/styles/parallax.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="logo">🌿 EcoSkin</div>
+    
+    <nav>
+      <a href="#inicio" class="nav-link">
+        <i data-lucide="home"></i> Início
+      </a>
+      <a href="#produtos" class="nav-link">
+        <i data-lucide="sparkles"></i> Produtos
+      </a>
+      <button id="btn-abrir-sobre" class="nav-link nav-btn">
+        <i data-lucide="leaf"></i> Sobre Nós
+      </button>
+    </nav>
+
+    <div class="acoes-header">
+      <!-- BOTÃO DO CARRINHO -->
+      <button id="btn-abrir-carrinho" class="btn-carrinho-icon">
+        <i data-lucide="shopping-bag"></i>
+        <span id="contador-carrinho" class="badge-carrinho">0</span>
+      </button>
+
+      <!-- BOTÃO DE LOGIN -->
+      <button id="btn-abrir-login" class="btn-login">
+        <i data-lucide="user"></i>
+        <span>Entrar</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SEÇÃO PRINCIPAL (HERO COM EFEITO PARALLAX) -->
+  <section class="hero hero-parallax" id="inicio">
+    <!-- Camada da imagem que se move com o parallax -->
+    <div class="hero-parallax-bg" id="hero-parallax-bg"></div>
+    
+    <!-- Camada verde-clara translúcida para manter a leitura do texto -->
+    <div class="hero-overlay"></div>
+
+    <!-- Conteúdo em primeiro plano -->
+    <div class="hero-conteudo">
+      <h1>Beleza Natural e Sustentável</h1>
+      <p>Cuide da sua pele com produtos 100% orgânicos, livres de crueldade animal e com embalagens biodegradáveis.</p>
+      <a href="#produtos" class="btn-principal">Ver Produtos</a>
+      <p id="status-backend" class="status-backend" role="status" aria-live="polite">Verificando conexão com o servidor...</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE PRODUTOS -->
+  <section class="produtos" id="produtos">
+    <h2 class="titulo-secao">Nossos Lançamentos</h2>
+    
+    <div class="grid-produtos">
+      
+      <!-- ============================================================
+           [PRODUTO 1] SABONETE HERBAL
+           Imagem da descrição: ./assets/images/store/natural.soap.png
+           ============================================================ -->
+      <div class="card-produto" 
+           data-nome="Sabonete Herbal" 
+           data-preco="24.90" 
+           data-descricao="Sabonete artesanal formulado com óleos vegetais e extratos botânicos. Limpa suavemente mantendo a hidratação natural da pele."
+           data-imagem="./assets/images/store/natural.soap.png"
+           data-icone="droplet"
+           data-opcoes-tipo="Fragrância"
+           data-opcoes="Lavanda, Hortelã, Eucalipto, Alecrim">
+        <div class="icone-placeholder">
+          <img class="tamanhoimg" src="./assets/images/store/natural.soap.png" alt="Sabonete Herbal">
+        </div>
+        <h3>Sabonete Herbal</h3>
+        <p>Com óleo essencial de alecrim e lavanda.</p>
+        <div class="preco">R$ 24,90</div>
+        <button class="btn-principal btn-adicionar-direto">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+      <!-- ==================== FIM DO PRODUTO 1 ==================== -->
+
+
+      <!-- ============================================================
+           [PRODUTO 2] SHAMPOO ORGÂNICO
+           Imagem da descrição: ./assets/images/store/pitanga.png
+           ============================================================ -->
+      <div class="card-produto" 
+           data-nome="Shampoo Orgânico" 
+           data-preco="49.90" 
+           data-descricao="Creme natural livre de sulfatos e parabenos. Fortalece os fios desde a raiz e devolve o brilho natural."
+           data-imagem="./assets/images/store/pitanga.png"
+           data-icone="sparkles"
+           data-opcoes-tipo="Tipo de Cabelo"
+           data-opcoes="Todos os Tipos, Oleosos, Secos e Danificados">
+        <div class="icone-placeholder">
+          <img class="tamanhoimg" src="./assets/images/store/pitanga.png" alt="Shampoo Orgânico">
+        </div>
+        <h3>Shampoo Orgânico</h3>
+        <p>Hidratação profunda e limpeza suave.</p>
+        <div class="preco">R$ 49,90</div>
+        <button class="btn-principal btn-adicionar-direto">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+      <!-- ==================== FIM DO PRODUTO 2 ==================== -->
+
+
+      <!-- ============================================================
+           [PRODUTO 3] CREME HIDRATANTE CORPORAL
+           Imagem da descrição: ./assets/images/store/creme.png
+           ============================================================ -->
+      <div class="card-produto" 
+           data-nome="Creme Hidratante Corporal" 
+           data-preco="45.00" 
+           data-descricao="Creme ultra-nutritivo com manteiga de karité pura. Absorção rápida, toque aveludado e nutrição prolongada por 24h."
+           data-imagem="./assets/images/store/creme.png"
+           data-icone="flower2"
+           data-opcoes-tipo="Aroma"
+           data-opcoes="Camomila & Mel, Aloe Vera, Sem Fragrância">
+        <div class="icone-placeholder">
+          <img class="tamanhoimg" src="./assets/images/store/creme.png" alt="Creme Hidratante Corporal">
+        </div>
+        <h3>Creme Hidratante Corporal</h3>
+        <p>Nutrição intensa com manteiga de karité pura.</p>
+        <div class="preco">R$ 45,00</div>
+        <button class="btn-principal btn-adicionar-direto">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+      <!-- ==================== FIM DO PRODUTO 3 ==================== -->
+
+    </div>
+  </section>
+
+  <!-- MODAL DE DETALHES DO PRODUTO -->
+  <div id="modal-produto" class="modal-overlay">
+    <div class="modal-conteudo modal-detalhes">
+      <button id="btn-fechar-produto" class="btn-fechar">&times;</button>
+      
+      <div class="detalhes-container">
+        
+        <!-- ============================================================
+             [IMAGEM DE DESCRIÇÃO DO PRODUTO NO MODAL]
+             Recebe automaticamente a foto do produto clicado (Sabonete, Shampoo ou Creme)
+             ============================================================ -->
+        <div class="detalhes-icone" id="detalhes-icone" style="padding: 0; overflow: hidden; height: 190px; border-radius: 12px;">
+          <img id="detalhes-imagem" src="" alt="Imagem do Produto" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        <!-- =============== FIM DA IMAGEM DE DESCRIÇÃO =============== -->
+
+        <div class="detalhes-info">
+          <h2 id="detalhes-titulo">Nome do Produto</h2>
+          <div class="preco-destaque" id="detalhes-preco">R$ 0,00</div>
+          <p class="descricao-produto" id="detalhes-descricao">Descrição detalhada do produto...</p>
+
+          <!-- SELEÇÃO DE OPÇÃO / FRAGRÂNCIA -->
+          <div class="campo-grupo">
+            <label for="detalhes-opcao" id="label-opcao">Selecione uma opção:</label>
+            <select id="detalhes-opcao">
+              <!-- Opções inseridas via JS -->
+            </select>
+          </div>
+
+          <!-- SELEÇÃO DE QUANTIDADE -->
+          <div class="campo-grupo">
+            <label>Quantidade:</label>
+            <div class="qtd-seletor">
+              <button id="btn-qtd-menos">-</button>
+              <span id="detalhes-qtd">1</span>
+              <button id="btn-qtd-mais">+</button>
+            </div>
+          </div>
+
+          <button id="btn-adicionar-modal" class="btn-principal btn-block">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE CADASTRO -->
+  <div id="modal-cadastro" class="modal-overlay">
+    <div class="modal-conteudo">
+      <button id="btn-fechar-modal" class="btn-fechar">&times;</button>
+      <h2>Criar sua Conta</h2>
+      <p class="subtitulo-modal">Junte-se à comunidade BioCosmetics</p>
+
+      <form id="form-cadastro">
+        <div class="campo-grupo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="campo-grupo">
+          <label for="sobrenome">Sobrenome</label>
+          <input type="text" id="sobrenome" placeholder="Seu sobrenome" required>
+        </div>
+        <div class="campo-grupo">
+          <label for="telefone">Número de Telefone</label>
+          <input type="tel" id="telefone" placeholder="(11) 99999-9999" required>
+        </div>
+        <div class="campo-grupo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Crie uma senha segura" required>
+        </div>
+        <button type="submit" class="btn-principal btn-block">Criar Conta</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL SOBRE NÓS -->
+  <div id="modal-sobre" class="modal-overlay">
+    <div class="modal-conteudo modal-ampla">
+      <button id="btn-fechar-sobre" class="btn-fechar">&times;</button>
+      
+      <div class="sobre-header">
+        <span class="badge-tag">Sustentabilidade & Ciência</span>
+        <h2>Sobre a BioCosmetics</h2>
+        <p class="subtitulo-modal">Transformando a rotina de autocuidado em um ato de respeito ao planeta.</p>
+      </div>
+
+      <div class="sobre-corpo">
+        <div class="sobre-bloco">
+          <h3><i data-lucide="award"></i> Quem Somos</h3>
+          <p>A <strong>BioCosmetics</strong> é uma empresa líder na formulação de cosméticos 100% orgânicos e ecologicamente responsáveis.</p>
+        </div>
+
+        <div class="sobre-bloco">
+          <h3><i data-lucide="factory"></i> O Que Fazemos</h3>
+          <p>Desenvolvemos produtos de autocuidado natural garantindo matérias-primas de origem ética e comércio justo.</p>
+        </div>
+
+        <div class="grid-pilares">
+          <div class="pilar-item">
+            <i data-lucide="shield-check"></i>
+            <h4>100% Orgânico</h4>
+            <p>Livre de parabenos e sulfatos.</p>
+          </div>
+          <div class="pilar-item">
+            <i data-lucide="heart"></i>
+            <h4>Cruelty-Free</h4>
+            <p>Não testado em animais.</p>
+          </div>
+          <div class="pilar-item">
+            <i data-lucide="recycle"></i>
+            <h4>Zero Plástico</h4>
+            <p>Embalagens recicláveis.</p>
+          </div>
+        </div>
+
+        <!-- FORMULÁRIO DE CONTATO -->
+        <div class="secao-contacto">
+          <h3><i data-lucide="mail"></i> Fale Conosco</h3>
+          <p class="subtitulo-contacto">Envie uma mensagem para a nossa equipe.</p>
+
+          <form id="form-contacto">
+            <div class="campo-grupo">
+              <label for="cont-nome">Nome Completo</label>
+              <input type="text" id="cont-nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="campo-grupo">
+              <label for="cont-email">E-mail</label>
+              <input type="email" id="cont-email" placeholder="seuemail@exemplo.com" required>
+            </div>
+            <div class="campo-grupo">
+              <label for="cont-mensagem">Mensagem</label>
+              <textarea id="cont-mensagem" rows="3" placeholder="Escreva aqui sua mensagem..." required></textarea>
+            </div>
+            <button type="submit" class="btn-principal btn-block">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAVETA LATERAL DO CARRINHO -->
+  <div id="carrinho-painel" class="carrinho-painel">
+    <div class="carrinho-topo">
+      <h3><i data-lucide="shopping-bag"></i> Seu Carrinho</h3>
+      <button id="btn-fechar-carrinho" class="btn-fechar">&times;</button>
+    </div>
+
+    <div id="lista-carrinho" class="carrinho-itens">
+      <!-- ITENS INSERIDOS VIA JAVASCRIPT -->
+    </div>
+
+    <div class="carrinho-rodape">
+      <div class="total-linha">
+        <span>Total:</span>
+        <strong id="total-carrinho">R$ 0,00</strong>
+      </div>
+      <button id="btn-finalizar-compra" class="btn-principal btn-block">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <div id="carrinho-overlay" class="carrinho-overlay"></div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2026 BioCosmetics — Projeto Acadêmico/Iniciante. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- SCRIPT PRINCIPAL DA LOJA -->
+  <script src="../src/scripts/store.js"></script>
+
+  <!-- ============================================================
+       [SCRIPT DE ATUALIZAÇÃO DA IMAGEM NO MODAL DE DESCRIÇÃO]
+       Substitui o ícone pelo atributo data-imagem de cada produto
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.card-produto');
+      const detalhesIcone = document.getElementById('detalhes-icone');
+
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
+          const imagemProduto = card.getAttribute('data-imagem');
+          const nomeProduto = card.getAttribute('data-nome');
+
+          if (imagemProduto && detalhesIcone) {
+            detalhesIcone.innerHTML = `
+              <img 
+                src="${imagemProduto}" 
+                alt="${nomeProduto}" 
+                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"
+              >
+            `;
+          }
+        });
+      });
+    });
+  </script>
+  <!-- ================ FIM DO SCRIPT DA IMAGEM ================== -->
+
+  <!-- SCRIPT DO EFEITO PARALLAX -->
+  <script src="../src/scripts/parallax.js"></script>
+
+</body>
+</html>
